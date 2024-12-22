@@ -1,4 +1,25 @@
 import YouTubeEmbed from '@/components/YouTubeEmbed';
+import ImageCarousel from '@/components/ImageCarousel';
+
+const projectImages = [
+    {
+        src: "/images/projects/paneling-tool/image1.png",
+        alt: "Paneling Tool Interface"
+    },
+    {
+        src: "/images/projects/paneling-tool/image2.png",
+        alt: "Panel Generation Process"
+    },
+    {
+        src: "/images/projects/paneling-tool/image3.png",
+        alt: "Generated Patterns"
+    },
+    {
+        src: "/images/projects/paneling-tool/image4.png",
+        alt: "Generated Patterns"
+    },
+    // Add as many images as you need
+];
 
 export default function Project3() {
   return (
@@ -29,10 +50,7 @@ export default function Project3() {
         {/* Images Section */}
         <section>
           <h2 className="text-xl font-bold mb-4 text-gray-800">Project Images</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="aspect-video bg-gray-200 rounded-lg"></div>
-            <div className="aspect-video bg-gray-200 rounded-lg"></div>
-          </div>
+          <ImageCarousel images={projectImages} />
         </section>
 
         {/* Video Demo */}
