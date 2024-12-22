@@ -1,20 +1,24 @@
 import ImageCarousel from '@/components/ImageCarousel';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function Project1() {
   const images = [
     {
-      src: '/images/unitize/1.png',
+      src: '/images/projects/unitize/image1.png',
       alt: 'Unitize System Image 1'
     },
     {
-      src: '/images/unitize/2.png',
+      src: '/images/projects/unitize/image2.png',
       alt: 'Unitize System Image 2'
     },
     {
-      src: '/images/unitize/3.png',
+      src: '/images/projects/unitize/image3.png',
       alt: 'Unitize System Image 3'
     },
-    // Add more images as needed
+    {
+      src: '/images/projects/unitize/image4.png',
+      alt: 'Unitize System Image 4'
+    }
   ];
 
   return (
@@ -25,36 +29,31 @@ export default function Project1() {
         <section>
           <h2 className="text-xl font-mono mb-4 text-gray-700">Overview</h2>
           <p className="font-mono text-gray-700">
-            A parametric tool for creating unitized facade systems. The tool allows users to generate 
-            complex facade patterns while maintaining manufacturing constraints and architectural design intent.
+            Parametric tool for creating any unitize systems or aluminium panels on facades in Revit. Can create corner units with different angles. Inputs for the algorithm is unit sample that we want to scale, and grid we would like to populate. Grid can be extracted from Revit curtain walls, provided from dwg or made in Rhino. As an output you get Revit families with uploaded units, scaled and placed to match provided grid. The algorithm creates new family for each unit of different size. Materials and parameters can be applied. Excel tables with materials can be exported.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-mono mb-4 text-gray-700">Features</h2>
+          <h2 className="text-xl font-mono mb-4 text-gray-700">Technologies Used</h2>
           <ul className="list-disc list-inside space-y-2 font-mono text-gray-700">
-            <li>Parametric control of panel dimensions and layouts</li>
-            <li>Automatic generation of mullion systems</li>
-            <li>Support for various panel types and materials</li>
-            <li>Real-time visualization of changes</li>
-            <li>Export capabilities for manufacturing</li>
+            <li>Rhino + Grasshopper</li>
+            <li>Rhino inside Revit</li>
+            <li>C#</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-xl font-mono mb-4 text-gray-700">Gallery</h2>
-          <div className="w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
+          <div className="w-full aspect-video bg-white rounded-lg overflow-hidden">
             <ImageCarousel images={images} />
           </div>
         </section>
 
         <section>
-          <h2 className="text-xl font-mono mb-4 text-gray-700">Technology</h2>
-          <ul className="list-disc list-inside space-y-2 font-mono text-gray-700">
-            <li>Grasshopper</li>
-            <li>Rhino</li>
-            <li>Python</li>
-          </ul>
+          <h2 className="text-xl font-mono mb-4 text-gray-700">Demo Video</h2>
+          <div className="w-full aspect-video bg-white rounded-lg overflow-hidden">
+            <YouTubeEmbed videoId="N7rOaj7Sy0w" />
+          </div>
         </section>
       </div>
     </div>

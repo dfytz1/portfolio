@@ -27,8 +27,8 @@ export default function ImageCarousel({ images }: Props) {
     };
 
     return (
-        <div className="relative group">
-            <div className="relative w-full h-full">
+        <div className="relative group h-full flex items-center">
+            <div className="relative w-full h-full flex items-center justify-center">
                 <Image 
                     src={images[currentIndex].src} 
                     alt={images[currentIndex].alt}
@@ -37,29 +37,27 @@ export default function ImageCarousel({ images }: Props) {
                     style={{
                         width: '100%',
                         height: 'auto',
-                        objectFit: 'contain',  // This ensures the image maintains its aspect ratio
-                        maxHeight: '600px'     // Adjust this value as needed
+                        objectFit: 'contain',
+                        maxHeight: '600px'
                     }}
                     quality={100}
                     priority={currentIndex === 0}
                 />
+                
+                {/* Clickable Areas */}
+                <div 
+                    onClick={goToPrevious}
+                    className="absolute left-0 top-0 w-1/4 h-full cursor-pointer flex items-center justify-start"
+                >
+                    <span className="text-2xl text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity ml-4">◂</span>
+                </div>
+                <div 
+                    onClick={goToNext}
+                    className="absolute right-0 top-0 w-1/4 h-full cursor-pointer flex items-center justify-end"
+                >
+                    <span className="text-2xl text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity mr-4">▸</span>
+                </div>
             </div>
-
-            {/* Navigation Buttons */}
-            <button
-                onClick={goToPrevious}
-                className="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                aria-label="Previous image"
-            >
-                ←
-            </button>
-            <button
-                onClick={goToNext}
-                className="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                aria-label="Next image"
-            >
-                →
-            </button>
         </div>
     );
 } 

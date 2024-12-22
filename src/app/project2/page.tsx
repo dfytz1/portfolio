@@ -28,8 +28,20 @@ export default function Project2() {
         <section>
           <h2 className="text-xl font-mono mb-4 text-gray-700">Project Images</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="aspect-video bg-gray-200 rounded-lg"></div>
-            <div className="aspect-video bg-gray-200 rounded-lg"></div>
+            <div className="w-full h-[400px] bg-white rounded-lg overflow-hidden">
+              <img 
+                src="/images/projects/stick-system/image1.png" 
+                alt="Stick System Visualization 1"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="w-full h-[400px] bg-white rounded-lg overflow-hidden">
+              <img 
+                src="/images/projects/stick-system/image2.png" 
+                alt="Stick System Visualization 2"
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         </section>
 
