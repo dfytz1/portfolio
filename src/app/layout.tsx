@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter, Roboto_Mono } from "next/font/google";
-import Link from "next/link";
+import SoundLink from "@/components/SoundLink";
 import "./globals.css";
 
 const montserrat = Montserrat({ 
@@ -28,28 +28,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-100`}>
+      <body className={`${inter.className} bg-gray-100 text-gray-700`}>
         <div className="flex min-h-screen">
           <nav className={`w-64 p-6 border-r border-gray-200 ${robotoMono.className}`}>
-            <ul className="space-y-4 font-bold text-sm">
+            <ul className="space-y-4 font-bold text-sm uppercase">
               <li>
-                <Link href="/" className="hover:text-gray-600">Project 1</Link>
+                <SoundLink href="/">Project 1</SoundLink>
               </li>
               <li>
-                <Link href="/project2" className="hover:text-gray-600">Project 2</Link>
+                <SoundLink href="/project2">Project 2</SoundLink>
               </li>
               <li>
-                <Link href="/project3" className="hover:text-gray-600">Project 3</Link>
+                <SoundLink href="/project3">Project 3</SoundLink>
               </li>
               <li>
-                <Link href="/about" className="hover:text-gray-600">About Me</Link>
+                <SoundLink href="/about">About Me</SoundLink>
               </li>
             </ul>
           </nav>
-          <main className="flex-1 p-8">
-            <div className={montserrat.className}>
-              {children}
-            </div>
+          <main className="flex-1 p-8 flex justify-center">
+            {children}
           </main>
         </div>
       </body>

@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Project3() {
   return (
     <div className="max-w-4xl">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Project 1</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">Project 3</h1>
       
       <div className="space-y-8">
         {/* Overview Section */}
@@ -48,4 +48,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+} 
