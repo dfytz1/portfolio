@@ -1,3 +1,5 @@
+import YouTubeEmbed from '@/components/YouTubeEmbed';
+
 export default function Home() {
   return (
     <div className="max-w-4xl">
@@ -34,7 +36,7 @@ export default function Home() {
         {/* Video Demo */}
         <section>
           <h2 className="text-xl font-bold mb-4 text-gray-800">Video Demo</h2>
-          <div className="aspect-video bg-gray-200 rounded-lg"></div>
+          <YouTubeEmbed videoId="F-1cuQprgmw" />
         </section>
 
         {/* Links */}
