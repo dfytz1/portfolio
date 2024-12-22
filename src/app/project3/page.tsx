@@ -33,7 +33,7 @@ export default function Project3() {
           <p className="text-gray-700">
             The algorithm that can create flat patterns and production drawings of aluminium facade panels. 
             Uses 2d or 3d data as input. Different profiles and panel types can be uploaded. 
-            Works in web via Shapediver direct embedding.
+            Works in web via Shapediver direct embedding. Exports as DWG and DXF with correct layers in hebrew.
           </p>
         </section>
 
@@ -57,15 +57,6 @@ export default function Project3() {
         <section>
           <h2 className="text-xl font-bold mb-4 text-gray-800">Video Demo</h2>
           <YouTubeEmbed videoId="F-1cuQprgmw" />
-        </section>
-
-        {/* Links */}
-        <section>
-          <h2 className="text-xl font-bold mb-4 text-gray-800">Project Links</h2>
-          <div className="space-x-4">
-            <a href="#" className="text-blue-600 hover:text-blue-800">Live Demo</a>
-            <a href="#" className="text-blue-600 hover:text-blue-800">GitHub Repository</a>
-          </div>
         </section>
       </div>
     </div>

@@ -37,7 +37,7 @@ export default function SoundLink({ href, children }: SoundLinkProps) {
         if (audioRef.current && canPlaySound) {
             audioRef.current.currentTime = 0;
             audioRef.current.play().catch(error => {
-                console.log('Audio playback error:', error);
+                console.error('Error playing sound:', error);
             });
         }
     };
