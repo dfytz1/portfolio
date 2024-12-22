@@ -73,7 +73,7 @@ export default function AboutPage() {
                             <h2 className="text-xl font-mono mb-4">CAREER</h2>
                             <ul className="space-y-2 font-mono text-sm">
                                 <li>• 2018-2022 Bachelor degree in architecture</li>
-                                <li>• 2021-2022 Architect's assistant (Parametric modeling)</li>
+                                <li>• 2021-2022 Architect&apos;s assistant (Parametric modeling)</li>
                                 <li>• 2022-2023 Upwork freelance (Rhino + Grasshopper)</li>
                                 <li>• 2023-prnt Ingeneering company based in Tel Aviv (Rhino + Grasshopper)</li>
                                 <li>• 2024-prnt International facade company based in France (Rhino + Grasshopper)</li>

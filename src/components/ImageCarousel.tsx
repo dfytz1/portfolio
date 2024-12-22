@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface ImageCarouselProps {
     images: {
@@ -57,10 +58,15 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
 
             {/* Image Container */}
             <div className="aspect-video bg-transparent rounded-lg overflow-hidden">
-                <img
-                    src={images[currentIndex].src}
-                    alt={images[currentIndex].alt}
-                    className="w-full h-full object-contain"
+                <Image 
+                    src={images[currentIndex].src} 
+                    alt={`Slide ${currentIndex + 1}`}
+                    width={500}  // adjust these values based on your needs
+                    height={300} // adjust these values based on your needs
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
                 />
             </div>
 
