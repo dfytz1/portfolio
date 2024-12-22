@@ -6,19 +6,16 @@ import MorphingLogo from './MorphingLogo';
 
 export default function Navigation({ className }: { className: string }) {
     const pathname = usePathname();
-    const isAboutPage = pathname === '/about';
 
     return (
-        <nav className={`w-64 p-6 ${className} ${isAboutPage ? 'bg-white' : ''}`}>
-            <div className="mb-8">
-                <MorphingLogo />
-            </div>
-            <ul className="space-y-4 font-bold text-sm uppercase">
+        <nav className={`${className} fixed w-64 h-screen p-8 flex flex-col`}>
+            <MorphingLogo />
+            <ul className="space-y-4 mt-16">
                 <li>
-                    <SoundLink href="/">Project 1</SoundLink>
+                    <SoundLink href="/project1">UNITIZE SYSTEM</SoundLink>
                 </li>
                 <li>
-                    <SoundLink href="/project2">Project 2</SoundLink>
+                    <SoundLink href="/project2">STICK SYSTEM</SoundLink>
                 </li>
                 <li>
                     <SoundLink href="/project3">PANELING TOOL</SoundLink>

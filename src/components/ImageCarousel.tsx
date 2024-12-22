@@ -2,80 +2,64 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-interface ImageCarouselProps {
-    images: {
-        src: string;
-        alt: string;
-    }[];
+interface ImageType {
+    src: string;
+    alt: string;
 }
 
-export default function ImageCarousel({ images }: ImageCarouselProps) {
+interface Props {
+    images: ImageType[];
+}
+
+export default function ImageCarousel({ images }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isHovering, setIsHovering] = useState(false);
 
-    const nextImage = () => {
-        setCurrentIndex((prev) => (prev + 1) % images.length);
+    const goToNext = () => {
+        setCurrentIndex((prevIndex) => 
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
     };
 
-    const previousImage = () => {
-        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-    };
-
-    const handleWheel = (e: React.WheelEvent) => {
-        if (e.deltaY > 0) {
-            nextImage();
-        } else {
-            previousImage();
-        }
+    const goToPrevious = () => {
+        setCurrentIndex((prevIndex) => 
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
     };
 
     return (
-        <div 
-            className="relative" 
-            onWheel={handleWheel}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-        >
-            {/* Navigation Arrows */}
-            <button 
-                onClick={previousImage}
-                className={`absolute left-2 top-1/2 -translate-y-1/2 z-10 w-6 h-6 flex items-center justify-center transition-opacity duration-200 ${
-                    isHovering ? 'opacity-100' : 'opacity-0'
-                }`}
-                aria-label="Previous image"
-            >
-                <div className="w-0 h-0 border-y-[8px] border-y-transparent border-r-[12px] border-r-gray-500" />
-            </button>
-            <button 
-                onClick={nextImage}
-                className={`absolute right-2 top-1/2 -translate-y-1/2 z-10 w-6 h-6 flex items-center justify-center transition-opacity duration-200 ${
-                    isHovering ? 'opacity-100' : 'opacity-0'
-                }`}
-                aria-label="Next image"
-            >
-                <div className="w-0 h-0 border-y-[8px] border-y-transparent border-l-[12px] border-l-gray-500" />
-            </button>
-
-            {/* Image Container */}
-            <div className="aspect-video bg-transparent rounded-lg overflow-hidden">
+        <div className="relative group">
+            <div className="relative w-full h-full">
                 <Image 
                     src={images[currentIndex].src} 
-                    alt={`Slide ${currentIndex + 1}`}
-                    width={500}  // adjust these values based on your needs
-                    height={300} // adjust these values based on your needs
+                    alt={images[currentIndex].alt}
+                    width={1000}
+                    height={1000}
                     style={{
                         width: '100%',
                         height: 'auto',
+                        objectFit: 'contain',  // This ensures the image maintains its aspect ratio
+                        maxHeight: '600px'     // Adjust this value as needed
                     }}
+                    quality={100}
+                    priority={currentIndex === 0}
                 />
             </div>
 
-            {/* Image Counter */}
-            <div className={`absolute bottom-2 right-2 bg-black/50 text-white px-2 py-1 rounded-full text-sm transition-opacity duration-200 ${
-                isHovering ? 'opacity-100' : 'opacity-0'
-            }`}>
-                {currentIndex + 1} / {images.length}
-            </div>
+            {/* Navigation Buttons */}
+            <button
+                onClick={goToPrevious}
+                className="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="Previous image"
+            >
+                ←
+            </button>
+            <button
+                onClick={goToNext}
+                className="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="Next image"
+            >
+                →
+            </button>
         </div>
     );
 } 
