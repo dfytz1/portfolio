@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter, Roboto_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import SoundLink from "@/components/SoundLink";
 import "./globals.css";
 
-const montserrat = Montserrat({ 
-  subsets: ["latin"],
-  display: 'swap',
-});
 const inter = Inter({ 
   subsets: ["latin"],
   display: 'swap',
