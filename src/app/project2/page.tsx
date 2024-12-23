@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Project2() {
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-4xl p-4">
       <h1 className="text-3xl font-mono mb-6 text-gray-700">STICK SYSTEM</h1>
       
       <div className="space-y-8">

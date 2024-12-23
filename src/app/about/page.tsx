@@ -4,10 +4,9 @@ import Image from 'next/image';
 export default function AboutPage() {
     return (
         <div className="min-h-screen flex items-start pt-16">
-            <div className="bg-white w-[1000px] h-[600px] flex">
+            <div className="bg-white w-full max-w-[1000px] flex flex-col-reverse md:flex-row">
                 {/* Left side */}
-                <div className="w-1/2 p-8">
-                    <h1 className="text-6xl font-mono mb-8 text-gray-700">CV</h1>
+                <div className="w-full md:w-1/2 p-8">
                     <div className="space-y-6">
                         <section>
                             <h2 className="text-xl font-mono mb-4 text-gray-700">SKILLS</h2>
@@ -46,7 +45,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Right side */}
-                <div className="w-1/2 p-8">
+                <div className="w-full md:w-1/2 p-8">
                     <div className="flex items-center gap-2 mb-8">
                         <Image
                             src="/images/bug-icon.png"

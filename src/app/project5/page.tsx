@@ -33,7 +33,7 @@ export default function Project5() {
   ];
 
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-4xl p-4">
       <h1 className="text-3xl font-mono mb-6 text-gray-700">TEXTILE PANELS</h1>
       
       <div className="space-y-8">

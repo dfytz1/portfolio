@@ -21,7 +21,7 @@ export default function Project4() {
   ];
 
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-4xl p-4">
       <h1 className="text-3xl font-mono mb-6 text-gray-700">HONEYCOMB PANELS</h1>
       
       <div className="space-y-8">
