@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function Project2() {
   return (

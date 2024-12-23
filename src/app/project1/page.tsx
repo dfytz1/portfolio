@@ -1,5 +1,4 @@
 import ImageCarousel from '@/components/ImageCarousel';
-import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function Project1() {
   const images = [
