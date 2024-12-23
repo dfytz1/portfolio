@@ -14,7 +14,7 @@ export default function Navigation({ className = "" }) {
                 </Link>
                 <ul className="space-y-4 font-mono text-gray-700">
                     <li>
-                        <SoundLink href="/project5">TEXTILE PANELS</SoundLink>
+                        <SoundLink href="/">TEXTILE PANELS</SoundLink>
                     </li>
                     <li>
                         <SoundLink href="/project1">UNITIZE SYSTEM</SoundLink>
