@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
+import useSound from 'use-sound';
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -20,14 +21,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <head>
         <link rel="preload" as="audio" href="/hover.mp3" type="audio/mpeg" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-white`}>
         <main className="flex flex-col md:flex-row min-h-screen">
           <Navigation className="w-full md:w-[300px] md:min-h-screen" />
-          <div className="flex-1 w-full flex justify-center">
+          <div className="flex-1 w-full">
             {children}
           </div>
         </main>
