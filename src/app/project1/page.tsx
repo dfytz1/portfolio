@@ -51,8 +51,14 @@ export default function Project1() {
 
         <section>
           <h2 className="text-xl font-mono mb-4 text-gray-700">Demo Video</h2>
-          <div className="w-full aspect-video bg-white rounded-lg overflow-hidden">
-            <YouTubeEmbed videoId="N7rOaj7Sy0w" />
+          <div className="w-full aspect-video bg-white overflow-hidden">
+            <iframe
+              src="https://player.vimeo.com/video/1041595847"
+              className="w-full h-full"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </section>
       </div>

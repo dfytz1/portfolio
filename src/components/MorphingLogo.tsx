@@ -8,12 +8,12 @@ interface Props {
 
 export default function MorphingLogo({ className }: Props) {
     const [isHovered, setIsHovered] = useState(false);
-    const [error, setError] = useState<Error | null>(null);
+    const [error] = useState<string | null>(null);
 
     if (error) {
         return (
             <div role="alert" className="text-red-500">
-                Failed to load logo: {error.message}
+                Failed to load logo: {error}
             </div>
         );
     }

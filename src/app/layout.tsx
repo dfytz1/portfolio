@@ -1,13 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Roboto_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 
 const inter = Inter({ 
-  subsets: ["latin"],
-  display: 'swap',
-});
-const robotoMono = Roboto_Mono({ 
   subsets: ["latin"],
   display: 'swap',
 });
@@ -20,22 +16,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <head>
         <link rel="preload" as="audio" href="/hover.mp3" type="audio/mpeg" />
       </head>
-      <body className={`${inter.className} bg-white text-gray-700`}>
-        <div className="flex min-h-screen">
-          <Navigation className={robotoMono.className} />
-          <main className="flex-1 p-8 flex justify-center">
+      <body className={inter.className}>
+        <main className="flex flex-col md:flex-row min-h-screen">
+          <Navigation className="w-full md:w-[300px] md:min-h-screen" />
+          <div className="flex-1 w-full flex justify-center">
             {children}
-          </main>
-        </div>
+          </div>
+        </main>
       </body>
     </html>
-  );
+  )
 }

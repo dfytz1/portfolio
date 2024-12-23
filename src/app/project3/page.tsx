@@ -1,15 +1,6 @@
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
-import ImageCarousel from '@/components/ImageCarousel';
 
 export default function Project3() {
-  // Regular images for carousel
-  const standaloneImages = [
-    {
-      src: '/images/projects/paneling-tool/image5.png',
-      alt: 'Paneling Tool Additional View'
-    }
-  ];
-
   return (
     <div className="max-w-4xl">
       <h1 className="text-3xl font-mono mb-6 text-gray-700">PANELING TOOL</h1>
@@ -23,10 +14,18 @@ export default function Project3() {
         </section>
 
         <section>
+          <h2 className="text-xl font-mono mb-4 text-gray-700">Technology</h2>
+          <ul className="list-disc list-inside space-y-2 font-mono text-gray-700">
+            <li>Rhino + grasshopper + plug-ins</li>
+            <li>Shapediver platform</li>
+            <li>Web platform</li>
+          </ul>
+        </section>
+
+        <section>
           <h2 className="text-xl font-mono mb-4 text-gray-700">Gallery</h2>
           <div className="space-y-6">
-            {/* Before/After Pair */}
-            <div className="w-full h-[400px] bg-gray-100 rounded-lg overflow-hidden">
+            <div className="w-full h-[400px] bg-white rounded-lg overflow-hidden">
               <BeforeAfterSlider
                 beforeImage="/images/projects/paneling-tool/image3.png"
                 afterImage="/images/projects/paneling-tool/image4.png"
@@ -35,7 +34,6 @@ export default function Project3() {
               />
             </div>
 
-            {/* Single Image */}
             <div className="w-full h-[600px] rounded-lg overflow-hidden">
               <img
                 src="/images/projects/paneling-tool/image5.png"
@@ -46,27 +44,17 @@ export default function Project3() {
           </div>
         </section>
 
-        {/* Video Section */}
         <section>
           <h2 className="text-xl font-mono mb-4 text-gray-700">Demo Video</h2>
-          <div className="w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
+          <div className="w-full aspect-video bg-white overflow-hidden">
             <iframe
+              src="https://player.vimeo.com/video/1041596096"
               className="w-full h-full"
-              src="https://www.youtube.com/embed/F-1cuQprgmw"
-              title="Paneling Tool Demo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
             />
           </div>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-mono mb-4 text-gray-700">Technology</h2>
-          <ul className="list-disc list-inside space-y-2 font-mono text-gray-700">
-            <li>Rhino + grasshopper + plug-ins</li>
-            <li>Shapediver platform</li>
-            <li>Web platform</li>
-          </ul>
         </section>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function Project2() {
@@ -29,17 +30,21 @@ export default function Project2() {
           <h2 className="text-xl font-mono mb-4 text-gray-700">Project Images</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="w-full h-[400px] bg-white rounded-lg overflow-hidden">
-              <img 
+              <Image 
                 src="/images/projects/stick-system/image1.png" 
                 alt="Stick System Visualization 1"
                 className="w-full h-full object-contain"
+                width={500}
+                height={300}
               />
             </div>
             <div className="w-full h-[400px] bg-white rounded-lg overflow-hidden">
-              <img 
+              <Image 
                 src="/images/projects/stick-system/image2.png" 
                 alt="Stick System Visualization 2"
                 className="w-full h-full object-contain"
+                width={500}
+                height={300}
               />
             </div>
           </div>
@@ -47,8 +52,16 @@ export default function Project2() {
 
         {/* Video Demo */}
         <section>
-          <h2 className="text-xl font-mono mb-4 text-gray-700">Video Demo</h2>
-          <YouTubeEmbed videoId="NbwyVoN2naU" />
+          <h2 className="text-xl font-mono mb-4 text-gray-700">Demo Video</h2>
+          <div className="w-full aspect-video bg-white overflow-hidden">
+            <iframe
+              src="https://player.vimeo.com/video/1041595716"
+              className="w-full h-full"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </section>
       </div>
     </div>

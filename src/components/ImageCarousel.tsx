@@ -27,22 +27,25 @@ export default function ImageCarousel({ images }: Props) {
     };
 
     return (
-        <div className="relative group h-full flex items-center">
+        <div className="relative group h-full flex items-center bg-white">
             <div className="relative w-full h-full flex items-center justify-center">
-                <Image 
-                    src={images[currentIndex].src} 
-                    alt={images[currentIndex].alt}
-                    width={1000}
-                    height={1000}
-                    style={{
-                        width: '100%',
-                        height: 'auto',
-                        objectFit: 'contain',
-                        maxHeight: '600px'
-                    }}
-                    quality={100}
-                    priority={currentIndex === 0}
-                />
+                <div className="w-full h-full flex items-center justify-center">
+                    <Image 
+                        src={images[currentIndex].src} 
+                        alt={images[currentIndex].alt}
+                        width={1000}
+                        height={1000}
+                        style={{
+                            maxWidth: '100%',
+                            maxHeight: '100%',
+                            width: 'auto',
+                            height: 'auto',
+                            objectFit: 'contain'
+                        }}
+                        quality={100}
+                        priority={currentIndex === 0}
+                    />
+                </div>
                 
                 {/* Clickable Areas */}
                 <div 

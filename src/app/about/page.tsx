@@ -29,8 +29,7 @@ export default function AboutPage() {
                                 <li>• Rhino Inside Revit</li>
                                 <li>• Grasshopper-Archicad</li>
                                 <li>• Autocad</li>
-                                <li>• Visual Studio Code</li>
-                                <li>• GitHub</li>
+                                <li>• Unreal Engine</li>
                             </ul>
                         </section>
                         <section>
