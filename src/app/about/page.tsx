@@ -16,7 +16,6 @@ export default function AboutPage() {
                                 <li>• Basic Python and C#</li>
                                 <li>• Data analysis</li>
                                 <li>• BIM integration</li>
-                                <li>• Web development</li>
                                 <li>• Architecture visualization</li>
                             </ul>
                         </section>
@@ -38,7 +37,6 @@ export default function AboutPage() {
                                 <li>• dfytz1@gmail.com</li>
                                 <li>• +380507621439</li>
                                 <li>• t.me/Dfytz1</li>
-                                <li>• github.com/Dfytz1</li>
                             </ul>
                         </section>
                     </div>
@@ -66,20 +64,13 @@ export default function AboutPage() {
 
                     <div className="space-y-6">
                         <section>
-                            <h2 className="text-xl font-mono mb-4 text-gray-700">ME</h2>
-                            <ul className="space-y-2 font-mono text-gray-700">
-                                <li>• Hard worker</li>
-                                <li>• In love with programming and architecture</li>
-                            </ul>
-                        </section>
-                        <section>
                             <h2 className="text-xl font-mono mb-4 text-gray-700">CAREER</h2>
                             <ul className="space-y-2 font-mono text-sm text-gray-700">
                                 <li>• 2018-2022 Bachelor degree in architecture</li>
-                                <li>• 2021-2022 Architect&apos;s assistant (Parametric modeling)</li>
-                                <li>• 2022-2023 Upwork freelance (Rhino + Grasshopper)</li>
-                                <li>• 2023-prnt Ingeneering company based in Tel Aviv (Rhino + Grasshopper)</li>
-                                <li>• 2024-prnt International facade company based in France (Rhino + Grasshopper)</li>
+                                <li>• 2021-2022 Architect&apos;s assistant </li>
+                                <li>• 2022-2023 Upwork freelance</li>
+                                <li>• 2023-2024 JOT company</li>
+                                <li>• 2024-prnt Facade Textile International</li>
                             </ul>
                         </section>
                     </div>

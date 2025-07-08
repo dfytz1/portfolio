@@ -29,6 +29,22 @@ export default function Home() {
     {
       src: '/images/projects/textile/image7.png',
       alt: 'Textile Panels Image 7'
+    },
+    {
+      src: '/images/projects/textile/image9.jpg',
+      alt: 'Textile Panels Image 9'
+    },
+    {
+      src: '/images/projects/textile/image10.jpg',
+      alt: 'Textile Panels Image 10'
+    },
+    {
+      src: '/images/projects/textile/image11.jpg',
+      alt: 'Textile Panels Image 11'
+    },
+    {
+      src: '/images/projects/textile/image12.jpg',
+      alt: 'Textile Panels Image 12'
     }
   ];
 
