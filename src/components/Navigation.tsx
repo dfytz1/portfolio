@@ -29,6 +29,9 @@ export default function Navigation({ className = "" }) {
                         <SoundLink href="/project4">HONEYCOMB PANELS</SoundLink>
                     </li>
                     <li>
+                        <SoundLink href="/diploma">DIPLOMA</SoundLink>
+                    </li>
+                    <li>
                         <SoundLink href="/about">About Me</SoundLink>
                     </li>
                 </ul>
