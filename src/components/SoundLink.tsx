@@ -15,7 +15,7 @@ export default function SoundLink({ href, children }: SoundLinkProps) {
     useEffect(() => {
         // Set initial volume when component mounts
         if (audioRef.current) {
-            audioRef.current.volume = 0.1;
+            audioRef.current.volume = 0.03;
         }
 
         const handleInteraction = () => {

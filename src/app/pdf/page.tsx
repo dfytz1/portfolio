@@ -1,0 +1,96 @@
+export default function PDFHome() {
+  const images = [
+    {
+      src: '/images/projects/textile/image1.png',
+      alt: 'Textile Panels Image 1'
+    },
+    {
+      src: '/images/projects/textile/image2.png',
+      alt: 'Textile Panels Image 2'
+    },
+    {
+      src: '/images/projects/textile/image3.png',
+      alt: 'Textile Panels Image 3'
+    },
+    {
+      src: '/images/projects/textile/image4.png',
+      alt: 'Textile Panels Image 4'
+    },
+    {
+      src: '/images/projects/textile/image5.png',
+      alt: 'Textile Panels Image 5'
+    },
+    {
+      src: '/images/projects/textile/image6.png',
+      alt: 'Textile Panels Image 6'
+    },
+    {
+      src: '/images/projects/textile/image7.png',
+      alt: 'Textile Panels Image 7'
+    },
+    {
+      src: '/images/projects/textile/image9.jpg',
+      alt: 'Textile Panels Image 9'
+    },
+    {
+      src: '/images/projects/textile/image10.jpg',
+      alt: 'Textile Panels Image 10'
+    },
+    {
+      src: '/images/projects/textile/image11.jpg',
+      alt: 'Textile Panels Image 11'
+    },
+    {
+      src: '/images/projects/textile/image12.jpg',
+      alt: 'Textile Panels Image 12'
+    }
+  ];
+
+  return (
+    <div className="max-w-4xl mx-auto p-8">
+      <h1 className="text-3xl font-mono mb-6 text-gray-700">TEXTILE PANELS</h1>
+      
+      <div className="space-y-8">
+        <section>
+          <h2 className="text-xl font-mono mb-4 text-gray-700">Overview</h2>
+          <p className="font-mono text-gray-700">
+            Cloth membrane panels made fully in Rhino and Grasshopper. As input algorithm takes triangular meshes or surfaces, as output - excels with parts lists, valid closed 3d models of each part, production drawings per each part, part nesting.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-mono mb-4 text-gray-700">Technologies Used</h2>
+          <ul className="list-disc list-inside space-y-2 font-mono text-gray-700">
+            <li>Rhino + Grasshopper</li>
+            <li>C#</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-mono mb-4 text-gray-700">Gallery</h2>
+          <div className="space-y-6">
+            {images.map((image, index) => (
+              <div key={index} className="w-full bg-white rounded-lg overflow-hidden">
+                <img 
+                  src={image.src} 
+                  alt={image.alt}
+                  className="w-full h-auto object-contain"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+              </div>
+            ))}
+            
+            <div className="w-full bg-white rounded-lg overflow-hidden">
+              <img
+                src="/images/projects/textile/image8.png"
+                alt="Textile Panels Additional View"
+                className="w-full h-auto object-contain"
+                style={{ maxWidth: '100%', height: 'auto' }}
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+} 
