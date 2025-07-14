@@ -1,4 +1,5 @@
 import ImageCarousel from '@/components/ImageCarousel';
+import Image from 'next/image';
 
 export default function Project4() {
   const images = [
@@ -48,10 +49,12 @@ export default function Project4() {
             </div>
             
             <div className="w-full h-[600px] bg-white rounded-lg overflow-hidden">
-              <img
+              <Image
                 src="/images/projects/honeycomb/image5.png"
                 alt="Honeycomb Panels Additional View"
                 className="w-full h-full object-contain"
+                width={1000}
+                height={600}
               />
             </div>
           </div>

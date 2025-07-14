@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function PDFAboutPage() {
     return (
         <div className="min-h-screen flex items-start justify-center pt-16">
@@ -42,7 +44,7 @@ export default function PDFAboutPage() {
                 {/* Right side */}
                 <div className="w-full md:w-1/2 p-8">
                     <div className="flex items-center gap-2 mb-8">
-                        <img
+                        <Image
                             src="/images/bug-icon.png"
                             alt="Bug icon"
                             width={24}
@@ -52,10 +54,12 @@ export default function PDFAboutPage() {
                         <h2 className="text-2xl font-mono text-gray-700">Ivan Grebennikov</h2>
                     </div>
                     
-                    <img
+                    <Image
                         src="/images/profile-photo.png"
                         alt="Ivan Grebennikov"
                         className="mb-8"
+                        width={300}
+                        height={300}
                         style={{ width: '300px', height: '300px', objectFit: 'cover' }}
                     />
 

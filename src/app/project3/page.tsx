@@ -1,4 +1,5 @@
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
+import Image from 'next/image';
 
 export default function Project3() {
   return (
@@ -35,10 +36,12 @@ export default function Project3() {
             </div>
 
             <div className="w-full h-[600px] rounded-lg overflow-hidden">
-              <img
+              <Image
                 src="/images/projects/paneling-tool/image5.png"
                 alt="Paneling Tool Additional View"
                 className="w-full h-full object-contain"
+                width={1000}
+                height={600}
               />
             </div>
           </div>

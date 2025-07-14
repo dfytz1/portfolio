@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function PDFHome() {
   const images = [
     {
@@ -71,20 +73,24 @@ export default function PDFHome() {
           <div className="space-y-6">
             {images.map((image, index) => (
               <div key={index} className="w-full bg-white rounded-lg overflow-hidden">
-                <img 
+                <Image 
                   src={image.src} 
                   alt={image.alt}
                   className="w-full h-auto object-contain"
+                  width={1000}
+                  height={600}
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
               </div>
             ))}
             
             <div className="w-full bg-white rounded-lg overflow-hidden">
-              <img
+              <Image
                 src="/images/projects/textile/image8.png"
                 alt="Textile Panels Additional View"
                 className="w-full h-auto object-contain"
+                width={1000}
+                height={600}
                 style={{ maxWidth: '100%', height: 'auto' }}
               />
             </div>

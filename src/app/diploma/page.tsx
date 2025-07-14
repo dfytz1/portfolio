@@ -10,7 +10,7 @@ export default function Diploma() {
         <section>
           <h2 className="text-xl font-mono mb-4 text-gray-700">Overview</h2>
           <p className="font-mono text-gray-700">
-            Bachelor's degree project, presenting exhibition center for the city of Dnipro. The project is a part of the city's development plan and is aimed at creating a new cultural and educational center for the city. Fully made in Rhino inside Revit and Grasshopper. Rendered in UE5.
+          Bachelor&apos;s degree project, presenting exhibition center for the city of Dnipro. The project is a part of the city&apos;s development plan and is aimed at creating a new cultural and educational center for the city. Fully made in Rhino inside Revit and Grasshopper. Rendered in UE5.
           </p>
         </section>
 

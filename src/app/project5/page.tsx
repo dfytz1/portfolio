@@ -1,4 +1,5 @@
 import ImageCarousel from '@/components/ImageCarousel';
+import Image from 'next/image';
 
 export default function Project5() {
   const images = [
@@ -76,10 +77,12 @@ export default function Project5() {
             </div>
             
             <div className="w-full h-[600px] bg-white rounded-lg overflow-hidden">
-              <img
+              <Image
                 src="/images/projects/textile/image8.png"
                 alt="Textile Panels Additional View"
                 className="w-full h-full object-contain"
+                width={1000}
+                height={600}
               />
             </div>
           </div>
