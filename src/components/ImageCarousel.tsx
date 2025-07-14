@@ -109,12 +109,23 @@ export default function ImageCarousel({ images, folderPath, imageCount, baseAltT
             {/* Full Resolution Modal */}
             {isModalOpen && (
                 <div 
-                    className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
+                    className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center"
                     onClick={closeModal}
                     onKeyDown={handleModalKeyDown}
                     tabIndex={0}
                 >
                     <div className="relative max-w-[90vw] max-h-[90vh] flex items-center justify-center">
+                        {/* Large clickable areas for navigation */}
+                        <div
+                            className="absolute left-0 top-0 h-full z-20 cursor-pointer"
+                            style={{ width: '45%' }}
+                            onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
+                        />
+                        <div
+                            className="absolute right-0 top-0 h-full z-20 cursor-pointer"
+                            style={{ width: '45%' }}
+                            onClick={(e) => { e.stopPropagation(); goToNext(); }}
+                        />
                         {/* Close button */}
                         <button
                             onClick={closeModal}
